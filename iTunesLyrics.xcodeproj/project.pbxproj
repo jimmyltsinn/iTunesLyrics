@@ -11,6 +11,7 @@
 		BF5262CB1DAE4031003E75C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5262CA1DAE4031003E75C9 /* ViewController.swift */; };
 		BF5262CD1DAE4031003E75C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5262CC1DAE4031003E75C9 /* Assets.xcassets */; };
 		BF5262D01DAE4031003E75C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5262CE1DAE4031003E75C9 /* Main.storyboard */; };
+		BF5262DB1DAE4054003E75C9 /* iTunesController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5262DA1DAE4054003E75C9 /* iTunesController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,10 @@
 		BF5262CC1DAE4031003E75C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF5262CF1DAE4031003E75C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF5262D11DAE4031003E75C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF5262D71DAE4054003E75C9 /* iTunesLyrics-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iTunesLyrics-Bridging-Header.h"; sourceTree = "<group>"; };
+		BF5262D81DAE4054003E75C9 /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
+		BF5262D91DAE4054003E75C9 /* iTunesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunesController.h; sourceTree = "<group>"; };
+		BF5262DA1DAE4054003E75C9 /* iTunesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTunesController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,8 +41,10 @@
 		BF5262BC1DAE4031003E75C9 = {
 			isa = PBXGroup;
 			children = (
+				BF5262DC1DAE405A003E75C9 /* iTunes Scripting Bridge (Objective C) */,
 				BF5262C71DAE4031003E75C9 /* iTunesLyrics */,
 				BF5262C61DAE4031003E75C9 /* Products */,
+				BF5262D71DAE4054003E75C9 /* iTunesLyrics-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +66,16 @@
 				BF5262D11DAE4031003E75C9 /* Info.plist */,
 			);
 			path = iTunesLyrics;
+			sourceTree = "<group>";
+		};
+		BF5262DC1DAE405A003E75C9 /* iTunes Scripting Bridge (Objective C) */ = {
+			isa = PBXGroup;
+			children = (
+				BF5262D81DAE4054003E75C9 /* iTunes.h */,
+				BF5262D91DAE4054003E75C9 /* iTunesController.h */,
+				BF5262DA1DAE4054003E75C9 /* iTunesController.m */,
+			);
+			name = "iTunes Scripting Bridge (Objective C)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,6 +111,7 @@
 					BF5262C41DAE4031003E75C9 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = QK3TW3E6N3;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -135,6 +153,7 @@
 			files = (
 				BF5262CB1DAE4031003E75C9 /* ViewController.swift in Sources */,
 				BF5262C91DAE4031003E75C9 /* AppDelegate.swift in Sources */,
+				BF5262DB1DAE4054003E75C9 /* iTunesController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,12 +265,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = QK3TW3E6N3;
 				INFOPLIST_FILE = iTunesLyrics/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jimmysinn.iTunesLyrics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iTunesLyrics-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -260,12 +282,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = QK3TW3E6N3;
 				INFOPLIST_FILE = iTunesLyrics/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jimmysinn.iTunesLyrics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iTunesLyrics-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
