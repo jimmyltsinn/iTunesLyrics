@@ -11,7 +11,7 @@
 		BF5262CB1DAE4031003E75C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5262CA1DAE4031003E75C9 /* ViewController.swift */; };
 		BF5262CD1DAE4031003E75C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5262CC1DAE4031003E75C9 /* Assets.xcassets */; };
 		BF5262D01DAE4031003E75C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5262CE1DAE4031003E75C9 /* Main.storyboard */; };
-		BF5262DB1DAE4054003E75C9 /* iTunesController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5262DA1DAE4054003E75C9 /* iTunesController.m */; };
+		BFFD0FD01DB015C000C55911 /* ITunesController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFD0FCF1DB015C000C55911 /* ITunesController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,9 +22,9 @@
 		BF5262CF1DAE4031003E75C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF5262D11DAE4031003E75C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF5262D71DAE4054003E75C9 /* iTunesLyrics-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iTunesLyrics-Bridging-Header.h"; sourceTree = "<group>"; };
-		BF5262D81DAE4054003E75C9 /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
-		BF5262D91DAE4054003E75C9 /* iTunesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunesController.h; sourceTree = "<group>"; };
-		BF5262DA1DAE4054003E75C9 /* iTunesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTunesController.m; sourceTree = "<group>"; };
+		BFFD0FCD1DB015AD00C55911 /* iTunes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = iTunes.h; path = external/iTunes.h; sourceTree = "<group>"; };
+		BFFD0FCE1DB015C000C55911 /* iTunesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iTunesController.h; path = iTunesLyrics/iTunesController.h; sourceTree = "<group>"; };
+		BFFD0FCF1DB015C000C55911 /* ITunesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ITunesController.m; path = iTunesLyrics/ITunesController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,9 +71,9 @@
 		BF5262DC1DAE405A003E75C9 /* iTunes Scripting Bridge (Objective C) */ = {
 			isa = PBXGroup;
 			children = (
-				BF5262D81DAE4054003E75C9 /* iTunes.h */,
-				BF5262D91DAE4054003E75C9 /* iTunesController.h */,
-				BF5262DA1DAE4054003E75C9 /* iTunesController.m */,
+				BFFD0FCD1DB015AD00C55911 /* iTunes.h */,
+				BFFD0FCE1DB015C000C55911 /* iTunesController.h */,
+				BFFD0FCF1DB015C000C55911 /* ITunesController.m */,
 			);
 			name = "iTunes Scripting Bridge (Objective C)";
 			sourceTree = "<group>";
@@ -152,8 +152,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF5262CB1DAE4031003E75C9 /* ViewController.swift in Sources */,
+				BFFD0FD01DB015C000C55911 /* ITunesController.m in Sources */,
 				BF5262C91DAE4031003E75C9 /* AppDelegate.swift in Sources */,
-				BF5262DB1DAE4054003E75C9 /* iTunesController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +313,7 @@
 				BF5262D61DAE4031003E75C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
