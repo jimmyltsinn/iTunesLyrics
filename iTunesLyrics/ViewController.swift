@@ -82,6 +82,17 @@ class ViewController: NSViewController {
         window.styleMask.insert(NSWindowStyleMask.titled)
         window.styleMask.insert(NSWindowStyleMask.resizable)
     }
+    
+    @IBAction func toggleOnTop(_ sender: NSButton) {
+        let window = self.view.window!
+        
+        if sender.state == NSOnState {
+            window.level = Int(CGWindowLevelForKey(.floatingWindow))
+        } else {
+            window.level = Int(CGWindowLevelForKey(.normalWindow))
+        }
+
+    }
 
     @IBAction func slideTransparency(_ sender: NSSlider) {
         self.view.window!.alphaValue = CGFloat(sender.doubleValue) / 100.0
